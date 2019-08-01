@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <title>Object Catch Game</title>
+  <link rel="stylesheet" href="objCatchGame.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- MAIN CONTENTS -->
+    <main id="game">
+      <h1 class=hidden>Object Catch Game</h1>
+      <div class="flex-container">
+        <div id="area">
+          <img class="area-bg" src="img/kitchen.png" alt="restaurant counter">
+          <div id="start" class="btn-play">START</div>
+          <div class="btn-howto">How to play?</div>
+          <img id="catcher" src="img/catcher.png" alt="an image of a dish">
+          <!-- RULES: Display when "How to play?" is clicked -->
+          <div id="rules">
+            <h2>How to play?</h2>
+            <ol>
+              <li class="rule1">Press "START" to play a game.</li>
+              <li class="rule2">Catch as many fallen items as you can in 60 seconds.</li>
+              <li class="rule3">There are some non-food items. Try to avoid them!</li>
+              <li class="rule4">If you miss catching foods or catch non-food items, you will lose a life. </li>
+              <li class="rule5">You are given 3 lives. You will lose the game if you lost 3 lives within 60 seconds.</li>
+            </ol>
+          </div>
+          <!-- Game Over: Display when geme is over -->
+          <div id="gameover" class="centre">
+            <div class="gameover-msg">GAME OVER</div>
+            <div class="btn-replay">Replay?</div>
+          </div>
+        </div>
+        <!-- GAME STATUS -->
+        <div id="status">
+          <div>
+            <span>TIME LEFT</span>
+            <div id="timer-outline">
+              <div id="timer">60</div>
+            </div>
+          </div>
+          <div>
+            <span>LIFE</span>
+            <div id="life">
+              <img id="life1" src="img/life.svg" alt="an image of heart">
+              <img id="life2" src="img/life.svg" alt="an image of heart">
+              <img id="life3" src="img/life.svg" alt="an image of heart">
+            </div>
+          </div>
+          <div>
+            <span>SCORE</span>
+            <div id="score">0</div>
+          </div>
+        </div>
+        <div class="img_load">
+          <!-- In order to pre-load all images to get width and height -->
+          <img src="img/apple_core.svg" alt="an image of a apple core"><img src="img/banana.svg" alt="an image of a banana">
+          <img src="img/banana_peel.svg" alt="an image of a banana peel"><img src="img/fishbone.svg" alt="an image of a fish bone">
+          <img src="img/egg.svg" alt="an image of a flied egg"><img src="img/pancake.svg" alt="an image of a pancake">
+          <img src="img/burger.svg" alt="an image of a humburger">
+        </div>
+      </div>
+      <!-- THE END OF MAIN CONTENTS: CONTEST -->
+    </main>
+  </div>
+
+  <!-- JavaScripts -->
+  <script type="text/javascript" src="lib/jquery-3.2.1.slim.min.js"></script>
+  <script type="text/javascript" src="obj/global.js"></script>
+  <script type="text/javascript" src="obj/catcher.js"></script>
+  <script type="text/javascript" src="obj/fallingItem.js"></script>
+  <script type="text/javascript" src="obj/field.js"></script>
+  <script type="text/javascript" src="obj/game.js"></script>
+  <script type="text/javascript" src="objCatchGame.js"></script>
+</body>
+
+</html>
